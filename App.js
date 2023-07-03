@@ -21,14 +21,14 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       {!currentSubject ? (
         <>
-        <Focus addSubject={setCurrentSubject} />
-        <FocusHistory history={history}/>
+          <Focus addSubject={setCurrentSubject} />
+          <FocusHistory history={history} />
         </>
       ) : (
         <Timer
-        focusSubject={currentSubject}
-        onTimerEnd={(subject) => {setHistory([...history, subject])}}
-        clearSubject={() => setCurrentSubject(null)}
+          focusSubject={currentSubject}
+          onTimerEnd={(subject) => { setHistory([...history, subject]) }}
+          clearSubject={() => setCurrentSubject(null)}
         />
       )}
     </SafeAreaView>
